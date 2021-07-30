@@ -12,15 +12,15 @@ public class MyAspect {
 
 
 
-//    @Around(value = "execution(* com.coyo.bootaop.service.*.*(..))")
-//    public Object around(ProceedingJoinPoint pjp) throws Throwable {
-//        System.out.println("Aroundbefore通知被执行了");
-//        Object proceed = pjp.proceed();
-//        String str = proceed.toString()+"aroundafter";
-//        System.out.println("Aroundafter通知被执行了");
-//        return str;
-//
-//    }
+    @Around(value = "execution(* com.coyo.bootaop.service.*.*(..))")
+    public Object around(ProceedingJoinPoint pjp) throws Throwable {
+        System.out.println("Aroundbefore通知被执行了");
+        Object proceed = pjp.proceed();
+        String str = proceed.toString()+"aroundafter";
+        System.out.println("Aroundafter通知被执行了");
+        return str;
+
+    }
 //
 //    @After(value = "execution(* com.coyo.bootaop.service.*.*(..))")
 //    public void after(){
